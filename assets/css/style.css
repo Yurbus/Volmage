@@ -43,8 +43,9 @@
 .button__style {
   padding: 21px 32px;
   border-radius: 12px;
-  background: url("../img/button_bg.png") center no-repeat;
-  color: #fff;
+  background: #E3BE63;
+  background: linear-gradient(134deg, rgb(227, 190, 99) 0%, rgb(251, 238, 185) 21%, rgb(213, 177, 93) 50%, rgb(248, 233, 178) 76%, rgb(221, 181, 83) 100%);
+  color: #000;
   font-family: var(--font-family);
   font-weight: 900;
   font-size: 18px;
@@ -55,7 +56,7 @@
   transition: all 0.3s ease 0s;
 }
 .button__style:hover {
-  background: var(--main-color-hover);
+  opacity: 0.8;
 }
 
 .pink__text {
@@ -80,7 +81,7 @@
   flex-direction: column;
   align-items: center;
   font-family: var(--font-family);
-  padding: 3em 0;
+  padding: 3em 8em 3em 0;
   z-index: 2;
 }
 
@@ -171,17 +172,6 @@ blockquote {
   border-right: 6px solid #786137;
 }
 
-.button__style {
-  display: inline-block;
-  background: linear-gradient(90deg, #f9d976, #f39f28);
-  color: #000;
-  text-transform: uppercase;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-
 .hero__image {
   position: absolute;
   right: -30em;
@@ -189,6 +179,23 @@ blockquote {
 }
 
 /*============== teaching =============================*/
+.teaching {
+  position: relative;
+}
+.teaching::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -3em;
+  width: 100%;
+  height: 100%;
+  background: url("../img/spot1.svg") no-repeat;
+}
+
+.teaching__body {
+  position: relative;
+  z-index: 2;
+}
 .teaching__body .teaching__list {
   margin-top: 40px;
 }
@@ -309,6 +316,7 @@ blockquote {
   .hero__content {
     max-width: 100%;
     text-align: center;
+    padding: 3em 0;
   }
   .button__style {
     width: 100%;
@@ -347,5 +355,12 @@ blockquote {
     width: 32px;
     height: 32px;
     margin-right: 12px;
+  }
+  .tech {
+    margin-left: -30px;
+  }
+  .tech .badge {
+    font-size: 24px;
+    width: 260px;
   }
 }/*# sourceMappingURL=style.css.map */

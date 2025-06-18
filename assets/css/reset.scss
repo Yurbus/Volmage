@@ -31,7 +31,7 @@ html,
 body {
 	font-size: 18px;
 	height: 100%;
-	font-family: 'Nunito Sans', sans-serif;
+	font-family: var(--font-family);
 	color: var(--text-color);
 	background: var(--bg-page);
 	;
