@@ -357,6 +357,122 @@ blockquote {
 		margin-bottom: 32px;
 	}
 }
+.getting__body {
+	margin-top: 100px;
+	.getting__title {
+		font-family: var(--font-family);
+		font-weight: 900;
+		font-size: clamp(20px, 4vw, 32px);
+		line-height: 100%;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.getting__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+		margin: 44px 0;
+	}
+	.item__getting {
+		border: 4px solid #EE568D;
+		border-radius: 6px;
+		padding: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 132px;
+		.getting__img {
+			img {
+				width: 64px;
+				height: 64px;
+				margin-right: 10px;
+			}
+		}
+		.getting__text {
+			font-family: var(--font-family-2);
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 120%;
+			max-width: 340px;
+		}
+	}
+	.getting__subtext {
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 120%;
+		text-align: center;
+		max-width: 850px;
+		margin: 0 auto;
+	}
+}
+
+/*==============  ==============================*/
+
+.whyvolmage {
+	position: relative;
+	&::after {
+		content:'';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url('../img/spot1.svg') no-repeat;
+	}
+}
+.whyvolmage__list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	margin: 64px 0 150px;
+	li {
+		display: flex;
+		align-items: center;
+		img {
+			width: 24px;
+			margin-right: 10px;
+		}
+		span {
+			font-family: var(--font-family-2);
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 140%;
+		}
+	}
+}
+.volmage__cards {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	margin-top: 60px;
+	.card__volmage {
+		background: linear-gradient(180deg, #010101 0%, #1F1F1F 100%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 0 12px 20px;
+		border-radius: 6px;
+		img {
+			width: 190px;
+			transform: translateY(-30px);
+		}
+		h3 {
+			font-family: var(--font-family-2);
+			font-weight: 800;
+			font-size: 20px;
+			line-height: 130%;
+			margin-bottom: 15px;
+		}
+		p {
+			font-family: var(--font-family-2);
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 130%;
+		}
+	}
+}
 
 
 /*==============  ==============================*/
@@ -492,6 +608,23 @@ blockquote {
 	.life::after {
 		right: -59%
 	}
+	.profession::after {
+		width: 0;
+		height: 0;
+	}
+	.getting__body {
+		.getting__items {
+			grid-template-columns: 1fr;
+			.item__getting {
+				.getting__text {
+					font-size: 18px;
+				}
+			}
+		}
+		.getting__subtext {
+			font-size: 18px;
+		}
+	}
 }
 @media (max-width:639.98px) {
 	.swiper-button-next {
@@ -544,6 +677,11 @@ blockquote {
 	.life__heading {
 		.life__subtext {
 			margin-top: 15px;
+		}
+	}
+	.profession__list {
+		li {
+			font-size: 18px;
 		}
 	}
 
