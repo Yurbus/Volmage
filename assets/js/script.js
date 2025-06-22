@@ -26,6 +26,36 @@ const isMobile = {
     }
 };
 
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.format__btn');
+    const modal = document.getElementById('formatModal');
+    const modalClose = document.getElementById('modalClose');
+    const formatInput = document.getElementById('selectedFormat');
+    const formatDisplay = document.getElementById('formatDisplay');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function (e) {
+            e.preventDefault();
+            const format = this.getAttribute('data-format');
+            formatInput.value = format;
+            formatDisplay.textContent = format;
+            modal.style.display = 'block';
+        });
+    });
+
+    modalClose.addEventListener('click', function () {
+        modal.style.display = 'none';
+    });
+
+    // Закрытие по клику вне окна
+    window.addEventListener('click', function (e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+
+
 // ------- Section about прокрутка чисел ---------------------------------------
 // document.addEventListener('DOMContentLoaded', () => {
 //     const statsBlock = document.getElementById('stats');

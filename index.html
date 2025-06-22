@@ -198,10 +198,93 @@
                         <a href="#" class="btn button__style">ХОЧУ НА БЕЗКОШТОВНУ ДІАГНОСТИКУ</a>
                     </div>
                 </div>
+            </section>
+             <!-- <section class="whyvolmage section-padding">
+                <div class="_container">
+                    <h2 class="title__h2">Структура навчання</h2>
+                </div>
+            </section> -->
+           <section class="training-structure section-padding">
+                <div class="training-structure__container _container">
+                    <h2 class="training-structure__title title__h2">СТРУКТУРА НАВЧАННЯ</h2>
 
-             </section>
-               
+                    <div class="training-structure__steps">
+                        <div class="step step--arrow">
+                            <div class="step__number">1</div>
+                            <h3 class="step__title">12 модулів</h3>
+                            <p class="step__desc">Техніка, психологія роботи з клієнтом, ціноутворення, просування</p>
+                        </div>
 
+                        <div class="step step--arrow-up">
+                            <div class="step__number">2</div>
+                            <h3 class="step__title">Контроль прогресу</h3>
+                            <p class="step__desc">Авторські відео, домашки, перевірка, стажування</p>
+                        </div>
+
+                        <div class="step step--arrow">
+                            <div class="step__number">3</div>
+                            <h3 class="step__title">Маркетинг</h3>
+                            <p class="step__desc">Гайд з Instagram і TikTok: як отримати потік клієнтів без бюджету</p>
+                        </div>
+
+                        <div class="step">
+                            <div class="step__number">4</div>
+                            <h3 class="step__title">Бонуси</h3>
+                            <p class="step__desc">Реферальна система, гайд із підняття цін, робота з преміум-сегментом</p>
+                        </div>
+                    </div>
+
+                    <div class="training-structure__bonus">
+                        <div class="bonus__text">
+                            <p>ДОДАТКОВІ БОНУСИПРИ<br> ОПЛАТІ В ПРОДОВЖ 24 ГОДИН!</p>
+                            <a href="" class="button__style">ХОЧУ НА БЕЗКОШТОВНУ ДІАГНОСТИКУ</a>
+                        </div>
+                        <div class="bonus__img">
+                            <img src="assets/img/present-package.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="formats section-padding">
+                <div class="_container">
+                    <h2 class="formats__title title__h2 pink__text">ФОРМАТИ УЧАСТІ:</h2>
+                    <div class="formats__wrapper">
+                        <!-- Standard -->
+                        <div class="format-card standard">
+                            <div class="format__text">
+                                <h3>STANDARD</h3>
+                                <p>доступ: <strong>3 міс.</strong></p>
+                                <span>+ закритий чат</span>
+                            </div>
+                            <a class="format__btn" href="" data-format="STANDARD">ОБРАТИ</a>
+                        </div>
+                        <!-- Premium -->
+                        <div class="format-card premium">
+                            <div class="format__text">
+                                <h3>PREMIUM</h3>
+                                <p>доступ: <strong>6 міс.</strong></p>
+                                <span>Куратор + перевірка домашки +<br>стажування в салоні Volmage</span>
+                            </div>
+                            <a class="format__btn" href="" data-format="PREMIUM">ОБРАТИ</a>
+                        </div>
+                        <!-- VIP -->
+                        <div class="format-card vip">
+                            <div class="format__text">
+                                <h3>VIP</h3>
+                                <p>доступ: <strong>Назавжди</strong></p>
+                                <span>Персональний супровід Надії+<br>Zoom-сесії + робота 1-на-1 +<br>повна трансформація</span>
+                            </div>
+                            <a class="format__btn" href="" data-format="VIP">ОБРАТИ</a>
+                        </div>
+                    </div>
+
+                    <p class="formats__note">
+                        Ми працюємо тільки з тими, кому можемо дійсно допомогти.<br>
+                        Якщо ти на роздоріжжі — це буде твоя точка ясності.
+                    </p>
+                </div>
+            </section>
 
 
 
@@ -246,6 +329,33 @@
                 </div>
             </div>
 		</footer>
+
+        <!-- Модалка -->
+        <div class="modal" id="formatModal" style="display: none;">
+            <div class="modal-content">
+                <span class="modal-close" id="modalClose">&times;</span>
+                <h2>Оформлення пакету</h2>
+                <form>
+                    <!-- Скрытое поле с названием формата -->
+                    <input type="hidden" name="selected_format" id="selectedFormat">
+                    <p>Ви обрали: <strong id="formatDisplay"></strong></p>
+
+                    <!-- Поле ім'я -->
+                    <div class="form-group">
+                        <input type="text" id="userName" placeholder="Ім'я:" name="user_name" required>
+                    </div>
+
+                    <!-- Поле телефон -->
+                    <div class="form-group">
+                        <input type="tel" id="userPhone" name="user_phone" required pattern="^\+?[0-9\s\-]{7,15}$" placeholder="+380...">
+                    </div>
+
+                    <!-- Кнопка відправки -->
+                    <button class="button__style btn-modal" type="submit">Підтвердити</button>
+                </form>
+            </div>
+        </div>
+
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
