@@ -1065,10 +1065,18 @@ blockquote {
     margin-top: 44px;
   }
   .step--arrow::after {
-    display: none;
+    content: "";
+    position: absolute;
+    right: -40px;
+    top: -1em;
+    background-image: url("../img/arrow-down-mob.svg");
   }
   .step--arrow-up::before {
-    display: none;
+    content: "";
+    position: absolute;
+    left: -37px;
+    top: 12%;
+    background-image: url("../img/arrow-down-bom2.svg");
   }
   .training-structure__bonus {
     flex-direction: column;
@@ -1201,7 +1209,8 @@ blockquote {
     font-size: 12px;
   }
   .life::after {
-    right: -39%;
+    right: -5em;
+    top: -11em;
   }
   .life__body .life__list {
     align-items: center;

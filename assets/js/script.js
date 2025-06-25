@@ -55,7 +55,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
+document.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth < 768) {
+        const steps = document.querySelectorAll('.step');
+        if (steps.length > 0) {
+            const lastStep = steps[steps.length - 1];
+            lastStep.classList.add('step--arrow-up');
+        }
+    }
+});
 // ------- Section about прокрутка чисел ---------------------------------------
 // document.addEventListener('DOMContentLoaded', () => {
 //     const statsBlock = document.getElementById('stats');
