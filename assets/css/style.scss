@@ -491,8 +491,8 @@ blockquote {
 /*============== structure ==============================*/
 
 .training-structure {
-  position: relative;
-  text-align: center;
+	position: relative;
+	text-align: center;
 }
 
 .training-structure::before,
@@ -538,7 +538,7 @@ blockquote {
 .step__title {
 	font-family: var(--font-family);
 	font-weight: 800;
-	font-size: clamp(18px, 4vw, 24px);
+	font-size: 24px;
 	line-height: 100%;
 	letter-spacing: 0%;
 	text-align: center;
@@ -1059,7 +1059,7 @@ blockquote {
 		margin-top: 40px;
 	}
 	.step {
-		margin-top: 40px;
+		margin-top: 44px;
 	}
 	.step--arrow::after {
 		display: none;
@@ -1241,6 +1241,11 @@ blockquote {
         grid-template-columns: repeat(1, 1fr);
         gap: 80px 20px;
     }
+	.bonus__img {
+		img {
+			width: 210px;
+		}
+	}
 	.swiper {
 		height: 700px;
 	}
