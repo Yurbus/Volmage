@@ -26,34 +26,37 @@ const isMobile = {
     }
 };
 
-document.addEventListener('DOMContentLoaded', function () {
-    const buttons = document.querySelectorAll('.format__btn');
+document.addEventListener("DOMContentLoaded", function () {
+    const openBtns = document.querySelectorAll('.format__btn');
     const modal = document.getElementById('formatModal');
-    const modalClose = document.getElementById('modalClose');
-    const formatInput = document.getElementById('selectedFormat');
-    const formatDisplay = document.getElementById('formatDisplay');
+    const closeBtn = document.getElementById('modalClose');
 
-    buttons.forEach(button => {
-        button.addEventListener('click', function (e) {
+    // Відкрити модалку
+    openBtns.forEach(btn => {
+        btn.addEventListener('click', function (e) {
             e.preventDefault();
-            const format = this.getAttribute('data-format');
-            formatInput.value = format;
-            formatDisplay.textContent = format;
-            modal.style.display = 'block';
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
         });
     });
 
-    modalClose.addEventListener('click', function () {
-        modal.style.display = 'none';
-    });
+    // Закрити модалку
+    function closeModal() {
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+    }
 
-    // Закрытие по клику вне окна
+    closeBtn.addEventListener('click', closeModal);
+
+    // Закриття при кліку поза вікном
     window.addEventListener('click', function (e) {
         if (e.target === modal) {
-            modal.style.display = 'none';
+            closeModal();
         }
     });
 });
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     if (window.innerWidth < 768) {
