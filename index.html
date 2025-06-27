@@ -376,9 +376,7 @@
                     <div class="footer__img">
                         <!-- <img src="assets/img/bottom_girl.png" alt=""> -->
                     </div>
-                   
                         <!-- <img class="footer__img" src="assets/img/bottom_girl.png" alt=""> -->
-                  
                 </div>
             </div>
 		</footer>
@@ -388,36 +386,31 @@
             <div class="modal-content">
                 <span class="modal-close" id="modalClose">&times;</span>
                 <h2>ХОЧУ НА БЕЗКОШТОВНУ ДІАГНОСТИКУ!</h2>
-                <form>
+                <form action="send_form.php" method="POST">
                     <!-- Скрытое поле с названием формата -->
                     <input type="hidden" name="selected_format" id="selectedFormat">
                     <p>Будь ласка, введіть корректно ваші данні:</p>
-
                     <!-- Поле ім'я -->
                     <div class="form-group">
                         <input type="text" id="userName" placeholder="Ім'я:" name="user_name" required>
                     </div>
-
                     <!-- Поле телефон -->
                     <div class="form-group">
-                        <input type="tel" id="userPhone" name="user_phone" required pattern="^\+?[0-9\s\-]{7,15}$" placeholder="+380...">
+                        <input type="tel" id="userPhone" name="user_phone" placeholder="+380..." required>
                     </div>
-
-                    <!-- Поле телефон -->
+                    <!-- Поле телеграм -->
                     <div class="form-group">
                         <input type="text" id="userTelegram" name="user_telegram" placeholder="Ваш телеграм">
                     </div>
-
                     <!-- Поле пакет -->
                     <div class="form-group">
                         <input type="text" id="userBox" name="user_box" placeholder="Оберіть пакет:">
                     </div>
-
+                    <!-- Поле відправити -->
                     <div class="form-group-btn">
                         <div class="form-group__text">*Натискаючи кнопку “замовити” ви приймаєте умови обробки персональних данних !</div>
                         <button class="button__style btn-modal" type="submit">Замовити</button>
                     </div>
-
                 </form>
             </div>
         </div>
