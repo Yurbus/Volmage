@@ -726,7 +726,7 @@ blockquote {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); /* затемнення */
+  background-color: rgba(0, 0, 0, 0.8); /* затемнення */
   transition: opacity 0.3s ease;
   opacity: 0;
   pointer-events: none; /* Щоб не натискалося, коли приховано */
@@ -740,7 +740,7 @@ blockquote {
 
 .modal-content {
   background-color: #000000;
-  margin: 10% auto;
+  margin: 7% auto 0;
   padding: 32px 64px;
   border-radius: 5px;
   width: 94%;
