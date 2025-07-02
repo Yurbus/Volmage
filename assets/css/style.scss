@@ -2,6 +2,7 @@
 :root {
 	--font-family: "Unbounded", sans-serif;
 	--font-family-2: "Montserrat", sans-serif;
+	--font-family-3: "Bebas Neue", sans-serif;
 	--font-size: 18px;
 	--font-weight: 500;
 	--bg-page: #000;
@@ -27,10 +28,11 @@
 /*---------------------------------------------------------------------*/ 
 
 .title__h1 {
-	font-family: var(--font-family);
+	font-family: var(--font-family-3);
 	font-weight: 900;
-	font-size: clamp(24px, 4vw, 72px);
+	font-size: clamp(72px, 12vw, 221px);
 	text-transform: uppercase;
+	line-height: 100%;
 }
 .title__h2 {
 	font-family: var(--font-family);
@@ -66,112 +68,158 @@
 }
 /*---------------------------------------------------------------------*/ 
 
+// .hero {
+// 	position: relative;
+// 	overflow: hidden;
+// 	padding: 4rem 2rem;
+// 	min-height: 100vh;
+// }
+
+// .hero__content {
+// 	position: relative;
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// 	font-family: var(--font-family);
+// 	padding: 3em 8em 3em 0;
+// 	z-index: 2;
+// }
+// .hero__body {
+// 	display: grid;
+// 	grid-template-columns: 1fr 30%;
+// }
+
+// .hero h2 {
+// 	font-weight: 900;
+// 	font-size: clamp(14px, 2vw, 32px);
+// 	line-height: 100%;
+// 	margin: 6px 0;
+// 	text-align: center;
+// }
+
+// .mentor {
+// 	font-family: var(--font-family-2);
+// 	font-weight: 600;
+// 	font-style: italic;
+// 	font-size: 18px;
+// 	line-height: 140%;
+// 	text-align: center;
+// 	display: inline-block;
+// 	margin-bottom: 12px;
+// }
+
+// .logo {
+// 	width: 286px;
+// 	margin: 2rem 0;
+// }
+// .tech  {
+// 	display: inline-flex;
+// 	flex-direction: column;
+// 	margin-bottom: 12px;
+// 	text-align: center;
+// 	p {
+// 		font-weight: 900;
+// 		font-size: 24px;
+// 		line-height: 100%;
+// 		text-align: center;
+// 		margin-bottom: 12px;
+// 	}
+// 	.badge {
+// 		background-color: #f24d95;
+// 		padding: 1rem 1.5rem;
+// 		border-radius: 0.5rem;
+// 		font-weight: 900;
+// 		font-size: 32px;
+// 		position: relative;
+// 		margin-bottom: 12px;
+// 		text-align: center;
+// 		&::after {
+// 			content: '';
+// 			position: absolute;
+// 			background: url('../img/gold-coin.png') no-repeat;
+// 			top: -50%;
+// 			width: 157px;
+// 			height: 157px;
+// 		}
+// 		small {
+// 			font-family: var(--font-family-2);
+// 			font-weight: 600;
+// 			font-style: italic;
+// 			font-size: 18px;
+// 			line-height: 100%;
+// 			text-align: center;
+// 			color: #fff;
+// 		}
+// 	}
+// }
+
+// blockquote {
+// 	font-family: var(--font-family-2);
+// 	max-width: 700px;
+// 	background: #1e1e1e;
+// 	font-weight: 500;
+// 	font-style: italic;
+// 	font-size: 18px;
+// 	line-height: 130%;
+// 	text-align: center;
+// 	padding: 24px;
+// 	border-radius: 0.8rem;
+// 	margin: 1.5rem 0;
+// 	border-left: 6px solid #786137;
+// 	border-right: 6px solid #786137;
+// }
+
 .hero {
 	position: relative;
 	overflow: hidden;
 	padding: 4rem 2rem;
 	min-height: 100vh;
 }
-
-.hero__content {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	font-family: var(--font-family);
-	padding: 3em 8em 3em 0;
-	z-index: 2;
-}
 .hero__body {
-	display: grid;
-	grid-template-columns: 1fr 30%;
+	padding-bottom: 110px;
 }
-
-.hero h2 {
-	font-weight: 900;
-	font-size: clamp(14px, 2vw, 32px);
-	line-height: 100%;
-	margin: 6px 0;
+.body__head {
 	text-align: center;
-}
-
-.mentor {
-	font-family: var(--font-family-2);
-	font-weight: 600;
-	font-style: italic;
-	font-size: 18px;
-	line-height: 140%;
-	text-align: center;
-	display: inline-block;
-	margin-bottom: 12px;
-}
-
-.logo {
-	width: 286px;
-	margin: 2rem 0;
-}
-.tech  {
-	display: inline-flex;
-	flex-direction: column;
-	margin-bottom: 12px;
-	text-align: center;
-	p {
-		font-weight: 900;
+	h2 {
+		font-weight: 500;
 		font-size: 24px;
 		line-height: 100%;
 		text-align: center;
-		margin-bottom: 12px;
 	}
-	.badge {
-		background-color: #f24d95;
-		padding: 1rem 1.5rem;
-		border-radius: 0.5rem;
-		font-weight: 900;
-		font-size: 32px;
-		position: relative;
-		margin-bottom: 12px;
-		text-align: center;
-		&::after {
-			content: '';
-			position: absolute;
-			background: url('../img/gold-coin.png') no-repeat;
-			top: -50%;
-			width: 157px;
-			height: 157px;
+}
+.hero__content {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	z-index: 3;
+	margin-top: 120px;
+	.tech {
+		display: flex;
+		flex-direction: column;
+		img {
+			width: 312px;
 		}
-		small {
-			font-family: var(--font-family-2);
-			font-weight: 600;
-			font-style: italic;
-			font-size: 18px;
-			line-height: 100%;
-			text-align: center;
-			color: #fff;
+		img:first-child {
+			margin-bottom: 150px;
+		}
+	}
+	blockquote {
+		max-width: 550px;
+		font-family: var(--font-family-2);
+		font-weight: 500;
+		font-style: italic;
+		font-size: 18px;
+		.button__style {
+		}
+		.format__btn {
+			margin-top: 60px;
 		}
 	}
 }
-
-blockquote {
-	font-family: var(--font-family-2);
-	max-width: 700px;
-	background: #1e1e1e;
-	font-weight: 500;
-	font-style: italic;
-	font-size: 18px;
-	line-height: 130%;
-	text-align: center;
-	padding: 24px;
-	border-radius: 0.8rem;
-	margin: 1.5rem 0;
-	border-left: 6px solid #786137;
-	border-right: 6px solid #786137;
-}
-
 .hero__image {
 	position: absolute;
-	right: -30em;
-	top: -18em;
-	
+	left: 6rem;
+	top: -10rem;
 }
 
 
@@ -1014,8 +1062,34 @@ form p {
 	.footer {
 		padding: 0 5rem 100px;
 	}
+	.hero__image {
+		position: absolute;
+		left: 29rem;
+		top: -5rem;
+	}
+}
+@media (max-width:1200px) {
+	.hero__image {
+		position: absolute;
+		left: -3rem;
+		top: -8rem;
+	}
 }
 @media (max-width:959.98px) {
+	.hero__content {
+		display: flex;
+		flex-direction: column;
+		.tech {
+			img:last-child {
+				margin: 0 auto;
+			} 
+		}
+		blockquote {
+			text-align: center;
+			margin: 0 auto;
+		}
+	}
+
 	.swiper-button-next {
 		right: 35%;
 	}
@@ -1048,34 +1122,17 @@ form p {
 		width: 100%;
 		padding: 21px;
 		font-size: 14px;
-	}
-	.hero__body {
-		grid-template-columns: 1fr;
-	}
-	.hero {
-		flex-direction: column;
-		padding: 2rem 1rem;
-	}
-	.hero__content {
-		max-width: 100%;
-		text-align: center;
-		padding: 3em 0;
-	}
-	.button__style {
-		width: 100%;
 		text-align: center;
 		font-size: 12px;
 		line-height: 120%;
 	}
-	blockquote {
-		font-size: 14px;
-		line-height: 140%;
-		margin: 1rem 0;
-	}
 	.hero__image {
-		right: -32em;
-		top: -14em;
+		position: absolute;
+		left: -3rem;
+		top: -5rem;
 	}
+
+
 	.life__body {
 		.life__list {
 			gap: 44px;
@@ -1172,6 +1229,22 @@ form p {
 }
 
 @media (max-width:639.98px) {
+	.hero {
+		padding: 4rem 1rem 0;
+	}
+	.hero__image {
+        position: absolute;
+        left: -3rem;
+        top: 0;
+    }
+	.hero__content {
+		.tech {
+			img:first-child {
+				width: 165px;
+				margin-bottom: 140px;
+			}
+		}
+	}
 	.swiper {
 		height: 600px;
 	}
@@ -1207,17 +1280,17 @@ form p {
 	.btn-modal {
 		padding: 16px;
 	}
-	.hero {
-        height: 1210px;
-    }
-	.hero__content {
-        padding: 0.5em 0;
-    }
-	.logo {
-		width: 196px;
-	}
 	.section-padding {
 		padding: 3em 0;
+	}
+	.hero__content {
+		margin-top: 90px;
+		.tech {
+			img:first-child {
+				width: 107px;
+				margin-bottom: 180px;
+			}
+		}
 	}
 	.profession__list li {
 		flex-direction: column;
@@ -1243,13 +1316,6 @@ form p {
 	.swiper-button-prev {
 		left: 10%;
 	}
-	.hero__image {
-        right: -7em;
-        top: 28em;
-		img {
-			width: 660px;
-		}
-    }
 	.mentor {
 		font-size: 12px;
 	}
@@ -1262,25 +1328,6 @@ form p {
 					margin-right: 12px;
 				}
 			}
-		}
-	}
-	.tech {
-		margin-left: -30px;
-		p {
-			font-size: 14px;
-		}
-		.badge {
-			font-size: 20px;
-			margin-bottom: 6px;
-			padding: 8px 16px;
-			&::after {
-				content: "";
-				background: url('../img/gold-coin-mob.png') no-repeat;
-				top: -53%;
-			}
-		}
-		small {
-			font-size: 12px;
 		}
 	}
 	.life::after {
@@ -1353,4 +1400,35 @@ form p {
 	.modal-content {
 		padding: 24px 32px;
 	}
+}
+
+@media (max-width:414.98px) {
+	.body__head h2 {
+		font-size: 14px;
+		line-height: 130%;
+		margin-bottom: 12px;
+	}
+	.hero__content {
+		margin-top: 74px;
+		.tech {
+			img:first-child {
+				width: 107px;
+				margin-bottom: 120px;
+			}
+			img {
+				width: 220px;
+			}
+		}
+		blockquote {
+			font-size: 14px;
+			.format__btn {
+				margin-top: 20px;
+			}
+		}
+	}
+	.hero__image {
+        position: absolute;
+        left: -1rem;
+        top: 6rem;
+    }
 }
