@@ -175,6 +175,7 @@
 	overflow: hidden;
 	padding: 4rem 2rem;
 	min-height: 100vh;
+	background: url('../img/black-texture-background.png') center no-repeat;
 }
 .hero__body {
 	padding-bottom: 110px;
@@ -1065,7 +1066,7 @@ form p {
 	}
 	.hero__image {
 		position: absolute;
-		left: 29rem;
+		left: 20rem;
 		top: -5rem;
 	}
 }
@@ -1284,6 +1285,12 @@ form p {
 	.section-padding {
 		padding: 3em 0;
 	}
+	.hero {
+		background: url('../img/black-texture-background-copy-mob.png') center no-repeat;
+	}
+	.hero__body {
+		padding-bottom: 60px;
+	}
 	.hero__content {
 		margin-top: 90px;
 		.tech {
@@ -1401,6 +1408,17 @@ form p {
 	.modal-content {
 		padding: 24px 32px;
 	}
+}
+
+@media (max-width:439.98px) {
+	.hero__content .tech img:first-child {
+        margin-bottom: 160px;
+    }
+	.hero__image {
+        position: absolute;
+        left: -1rem;
+        top: 7rem;
+    }
 }
 
 @media (max-width:414.98px) {
