@@ -92,7 +92,7 @@
 }
 .body__head h2 {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 32px;
   line-height: 100%;
   text-align: center;
 }
@@ -1148,6 +1148,11 @@ form p {
     width: 107px;
     margin-bottom: 180px;
   }
+  .body__head h2 {
+    font-size: 20px;
+    line-height: 130%;
+    margin-bottom: 12px;
+  }
   .profession__list li {
     flex-direction: column;
     text-align: center;
@@ -1263,11 +1268,6 @@ form p {
   }
 }
 @media (max-width: 414.98px) {
-  .body__head h2 {
-    font-size: 14px;
-    line-height: 130%;
-    margin-bottom: 12px;
-  }
   .hero__content {
     margin-top: 74px;
   }
