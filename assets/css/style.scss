@@ -68,108 +68,6 @@
 	padding: 6em 0;
 }
 /*---------------------------------------------------------------------*/ 
-
-// .hero {
-// 	position: relative;
-// 	overflow: hidden;
-// 	padding: 4rem 2rem;
-// 	min-height: 100vh;
-// }
-
-// .hero__content {
-// 	position: relative;
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
-// 	font-family: var(--font-family);
-// 	padding: 3em 8em 3em 0;
-// 	z-index: 2;
-// }
-// .hero__body {
-// 	display: grid;
-// 	grid-template-columns: 1fr 30%;
-// }
-
-// .hero h2 {
-// 	font-weight: 900;
-// 	font-size: clamp(14px, 2vw, 32px);
-// 	line-height: 100%;
-// 	margin: 6px 0;
-// 	text-align: center;
-// }
-
-// .mentor {
-// 	font-family: var(--font-family-2);
-// 	font-weight: 600;
-// 	font-style: italic;
-// 	font-size: 18px;
-// 	line-height: 140%;
-// 	text-align: center;
-// 	display: inline-block;
-// 	margin-bottom: 12px;
-// }
-
-// .logo {
-// 	width: 286px;
-// 	margin: 2rem 0;
-// }
-// .tech  {
-// 	display: inline-flex;
-// 	flex-direction: column;
-// 	margin-bottom: 12px;
-// 	text-align: center;
-// 	p {
-// 		font-weight: 900;
-// 		font-size: 24px;
-// 		line-height: 100%;
-// 		text-align: center;
-// 		margin-bottom: 12px;
-// 	}
-// 	.badge {
-// 		background-color: #f24d95;
-// 		padding: 1rem 1.5rem;
-// 		border-radius: 0.5rem;
-// 		font-weight: 900;
-// 		font-size: 32px;
-// 		position: relative;
-// 		margin-bottom: 12px;
-// 		text-align: center;
-// 		&::after {
-// 			content: '';
-// 			position: absolute;
-// 			background: url('../img/gold-coin.png') no-repeat;
-// 			top: -50%;
-// 			width: 157px;
-// 			height: 157px;
-// 		}
-// 		small {
-// 			font-family: var(--font-family-2);
-// 			font-weight: 600;
-// 			font-style: italic;
-// 			font-size: 18px;
-// 			line-height: 100%;
-// 			text-align: center;
-// 			color: #fff;
-// 		}
-// 	}
-// }
-
-// blockquote {
-// 	font-family: var(--font-family-2);
-// 	max-width: 700px;
-// 	background: #1e1e1e;
-// 	font-weight: 500;
-// 	font-style: italic;
-// 	font-size: 18px;
-// 	line-height: 130%;
-// 	text-align: center;
-// 	padding: 24px;
-// 	border-radius: 0.8rem;
-// 	margin: 1.5rem 0;
-// 	border-left: 6px solid #786137;
-// 	border-right: 6px solid #786137;
-// }
-
 .hero {
 	position: relative;
 	overflow: hidden;
@@ -223,7 +121,9 @@
 	left: 6rem;
 	top: -10rem;
 }
-
+.hero__image-mob {
+	display: none;
+}
 
 /*============== teaching =============================*/
 .teaching {
@@ -1417,11 +1317,21 @@ form p {
 	.hero__content .tech img:first-child {
         margin-bottom: 160px;
     }
+	// .hero__image {
+    //     position: absolute;
+    //     left: -1rem;
+    //     top: 7rem;
+    // }
 	.hero__image {
-        position: absolute;
-        left: -1rem;
-        top: 7rem;
-    }
+		display: none;
+	}
+	.hero__image-mob {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 10rem;
+		width: 100%;
+	}
 }
 
 @media (max-width:414.98px) {

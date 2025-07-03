@@ -131,6 +131,10 @@
   top: -10rem;
 }
 
+.hero__image-mob {
+  display: none;
+}
+
 /*============== teaching =============================*/
 .teaching {
   position: relative;
@@ -1262,9 +1266,14 @@ form p {
     margin-bottom: 160px;
   }
   .hero__image {
+    display: none;
+  }
+  .hero__image-mob {
+    display: block;
     position: absolute;
-    left: -1rem;
-    top: 7rem;
+    left: 0;
+    top: 10rem;
+    width: 100%;
   }
 }
 @media (max-width: 414.98px) {
