@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/magnific-popup.css">
 
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lcv2z0kAAAAAJY8o73vSHsUCF2FprCoZgdiqPXA"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -454,7 +455,7 @@
         <script src="assets/js/swiper-slider.js"></script>
         <script src="assets/js/jquery.magnific-popup.min.js"></script>
         <script src="assets/js/popup.js"></script>
-        <script>
+        <!-- <script>
             document.getElementById("orderForm").addEventListener("submit", function (e) {
                 e.preventDefault();
                 
@@ -489,6 +490,48 @@
                 const popup = document.getElementById("successPopup");
                 popup.style.display = "none";
                 }
+        </script> -->
+        <script>
+            document.getElementById("orderForm").addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const form = e.target;
+
+                grecaptcha.ready(function () {
+                    grecaptcha.execute('6Lc34HsrAAAAANUwmbvCqCRtFRib6iqKn90IuaQ5', { action: 'form_submit' }).then(function (token) {
+                        const formData = new FormData(form);
+                        formData.append('g-recaptcha-response', token); // добавляем токен в formData
+
+                        fetch("send_form.php", {
+                            method: "POST",
+                            body: formData
+                        })
+                        .then(response => response.text())
+                        .then(result => {
+                            if (result.trim() === "OK") {
+                                form.reset();
+                                showPopup();
+                            } else {
+                                alert("❌ Помилка: " + result);
+                            }
+                        })
+                        .catch(error => {
+                            alert("❌ Сталася помилка.");
+                            console.error(error);
+                        });
+                    });
+                });
+            });
+
+            function showPopup() {
+                const popup = document.getElementById("successPopup");
+                popup.style.display = "flex";
+            }
+
+            function closePopup() {
+                const popup = document.getElementById("successPopup");
+                popup.style.display = "none";
+            }
         </script>
         <!-- <script>
             $(".gallery").magnificPopup({
