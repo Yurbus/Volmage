@@ -51,7 +51,7 @@
 
         // 1. Проверка reCAPTCHA
         $recaptchaToken = $_POST['g-recaptcha-response'];
-        $secretKey = '6Lc34HsrAAAAABJ2mGPiNe3c5IGJINbepYjWAv9Y';
+        $secretKey = '';
 
         $verifyUrl = 'https://www.google.com/recaptcha/api/siteverify';
         $data = [

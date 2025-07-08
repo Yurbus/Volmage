@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/magnific-popup.css">
 
-    <script src="https://www.google.com/recaptcha/api.js?render=6Lcv2z0kAAAAAJY8o73vSHsUCF2FprCoZgdiqPXA"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=..."></script>
 </head>
 <body>
     <div class="wrapper">
@@ -498,7 +498,7 @@
                 const form = e.target;
 
                 grecaptcha.ready(function () {
-                    grecaptcha.execute('6Lc34HsrAAAAANUwmbvCqCRtFRib6iqKn90IuaQ5', { action: 'form_submit' }).then(function (token) {
+                    grecaptcha.execute('...', { action: 'form_submit' }).then(function (token) {
                         const formData = new FormData(form);
                         formData.append('g-recaptcha-response', token); // добавляем токен в formData
 
