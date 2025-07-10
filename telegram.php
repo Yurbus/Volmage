@@ -1,7 +1,7 @@
 <?php
 // Настройки
-$token = "7751416363:AAEdMsqj2MjAcEuVtam9aUwad8SH0FxolsU"; // Заміни на свій токен
-$chat_id = "7751416363"; // Заміни на свій chat_id
+$token = ""; // Заміни на свій токен
+$chat_id = ""; // Заміни на свій chat_id
 
 // Отримання даних з форми
 $name = $_POST['user_name'] ?? 'Не вказано';
