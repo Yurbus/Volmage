@@ -496,6 +496,32 @@
                 e.preventDefault();
 
                 const form = e.target;
+                const formData = new FormData(form);
+
+                fetch("send_form.php", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(result => {
+                    if (result.trim() === "OK") {
+                        form.reset();
+                        alert("Форму успішно надіслано!");
+                    } else {
+                        alert("Помилка: " + result);
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("Сталася помилка при відправці.");
+                });
+            });
+        </script>
+        <!-- <script>
+            document.getElementById("orderForm").addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const form = e.target;
 
                 grecaptcha.ready(function () {
                     grecaptcha.execute('...', { action: 'form_submit' }).then(function (token) {
@@ -532,7 +558,10 @@
                 const popup = document.getElementById("successPopup");
                 popup.style.display = "none";
             }
-        </script>
+        </script> -->
+
+
+        
         <!-- <script>
             $(".gallery").magnificPopup({
                 delegate: "a",
